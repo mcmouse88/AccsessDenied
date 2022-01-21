@@ -14,10 +14,6 @@ public class Main {
 
         validateUser(getUserByLoginAndPassword(login, password));
 
-        // Проверить логин и пароль
-
-        // Проверить возраст
-
         System.out.println("доступ разрешен");
     }
 
@@ -33,7 +29,6 @@ public class Main {
     public static User getUserByLoginAndPassword(String login, String password) throws UserNotFoundException {
         User[] users = getUsers();
         for (User user : users) {
-            // TODO Аогоритм поиска пользователя
             if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
                 return user;
             }
